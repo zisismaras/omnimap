@@ -47,7 +47,7 @@ In the `map()` function the key is the current line number of the file (which we
 We use the builtin `emit()` function 3 times for each line to emit 3 key/value pairs (lines, words, characters).  
 In the `reduce()` function we get our key, our values which is an array of numbers in our case and the rereduce flag which we will explain below.  
 We then just sum the `values` array using the builtin `sum()` function and return the result.  
-The output is written to stdout as `key\tvalue\n` for each key to be easily parsable by another program (or omnimap itself!).
+The output is written to stdout as `key\tvalue\n` for each key so it can be easily parseable by another program (or omnimap itself!).
 
 ## Reduce and rereduce
 
@@ -61,4 +61,12 @@ It has some implementation details that are couchdb specific but the general log
 
 ## Building from source
 
-### TODO
+To build from source you will need a copy of Clang and LLVM which can be installed from your package manager
+and the [rust](https://www.rust-lang.org/) compiler (version 1.44 and up).  
+Clone the repo and run:
+
+```bash
+cargo build --release
+```
+
+You can then use the executable in `./target/release/`.
