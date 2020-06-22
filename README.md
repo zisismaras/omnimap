@@ -59,6 +59,14 @@ It has some implementation details that are couchdb specific but the general log
 
 ### TODO
 
+In the meantime use `--help` and read more about these flags:
+
+* --read-buffer-size
+* --key-flush-size
+* --max-file-part-size
+* --index-every
+* --workers
+
 ## Building from source
 
 To build from source you will need a copy of Clang and LLVM which can be installed from your package manager
